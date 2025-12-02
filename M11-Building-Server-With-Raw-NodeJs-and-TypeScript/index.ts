@@ -1,1 +1,0 @@
-console.log("Hello NodeJs with nodemon,Today I will learn NodeJS");
