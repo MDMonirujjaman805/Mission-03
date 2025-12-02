@@ -1,0 +1,33 @@
+{
+  "name": "m12-crud-operations-with-express-typescript-postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/MDMonirujjaman805/M12-CRUD-Operations-with-Express-TypeScript-PostgreSQL#readme",
+  "bugs": {
+    "url": "https://github.com/MDMonirujjaman805/M12-CRUD-Operations-with-Express-TypeScript-PostgreSQL/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MDMonirujjaman805/M12-CRUD-Operations-with-Express-TypeScript-PostgreSQL.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tsx watch ./src/config/server.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/pg": "^8.15.6",
+    "dotenv": "^17.2.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
