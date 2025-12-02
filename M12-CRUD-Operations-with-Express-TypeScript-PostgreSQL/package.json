@@ -16,18 +16,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tsx watch ./src/config/server.ts",
+    "dev": "npx tsx watch ./src/server.ts",
     "build": "tsc"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "pg": "^8.16.3"
+    "express": "^5.2.1",
+    "pg": "^8.16.3",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@types/express": "^5.0.5",
+    "@types/express": "^5.0.6",
     "@types/pg": "^8.15.6",
     "dotenv": "^17.2.3",
-    "tsx": "^4.20.6",
-    "typescript": "^5.9.3"
-  }
+    "tsx": "^4.21.0"
+  },
+  "keywords": []
 }
