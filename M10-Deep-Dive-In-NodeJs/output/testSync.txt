@@ -1,0 +1,3 @@
+ This is amazing day,
+ Node js is awesome.
+ This is Append File.
