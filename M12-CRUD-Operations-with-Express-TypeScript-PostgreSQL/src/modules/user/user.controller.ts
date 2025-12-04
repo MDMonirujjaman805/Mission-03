@@ -2,21 +2,22 @@ import { Request, Response } from "express";
 import { userServices } from "./user.service";
 
 const createUser = async (req: Request, res: Response) => {
-  const { name, age, email } = req.body;
   try {
-    const result = await userServices.createUser(name, age, email);
-    // console.log(result.rows[0]);
+    const result = await userServices.createUser(req.body);
+
     res.status(201).json({
-      success: false,
+      success: true,
       message: "Data Inserted Successfully.",
       data: result.rows[0],
     });
 
-    console.log("Data Inserted Successfully in:", result.rows[0]); //optional
+    console.log("Data Inserted Successfully:", result.rows[0]);
   } catch (error: any) {
-    res
-      .status(500)
-      .json({ success: false, message: error.message, details: error });
+    res.status(500).json({
+      success: false,
+      message: error.message,
+      details: error,
+    });
   }
 };
 
