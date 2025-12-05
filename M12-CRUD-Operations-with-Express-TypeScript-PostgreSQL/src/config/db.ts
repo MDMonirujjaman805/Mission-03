@@ -1,9 +1,29 @@
+// import { Pool } from "pg";
+// import config from ".";
+
+// // DataBase
+// export const pool = new Pool({
+//   connectionString: config.connection_str,
+//   ssl: {
+//     rejectUnauthorized: false,
+//   },
+// });
+
 import { Pool } from "pg";
 import config from ".";
 
-// DataBase
+if (!config.connection_str) {
+  console.error("❌ CONNECTION_STRING missing from .env");
+  process.exit(1);
+}
+
 export const pool = new Pool({
-  connectionString: `${config.connection_str}`,
+  connectionString: config.connection_str,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+  idleTimeoutMillis: 0,
+  connectionTimeoutMillis: 5000,
 });
 
 export const initDB = async () => {
